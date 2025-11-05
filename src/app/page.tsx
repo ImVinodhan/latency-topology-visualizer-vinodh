@@ -12,7 +12,7 @@ const Globe3D = dynamic(() => import('@/components/GlobeClient'), {
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen p-4 bg-slate-900 text-white">
+    <main className="flex flex-col items-center justify-center min-h-screen bg-white text-black dark:bg-slate-900 dark:text-white transition-colors duration-300">
       <Globe3D />
     </main>
   );
