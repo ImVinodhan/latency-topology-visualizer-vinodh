@@ -14,3 +14,10 @@ html {
   box-sizing: border-box;
   transition: background-color 200ms linear, color 200ms linear;
 }
+
+@media (max-width: 640px) {
+  html, body {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}

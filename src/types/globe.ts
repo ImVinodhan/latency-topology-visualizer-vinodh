@@ -6,12 +6,14 @@ export interface Exchange {
     color?: string;
 }
 
-export interface LatencyArc {
-    startLat: number;
-    startLng: number;
-    endLat: number;
-    endLng: number;
-    latency: number;
-    color: string;
-    exchange: string;
-}
+export type LatencyArc = {
+  id: string;
+  startLat: number;
+  startLng: number;
+  endLat: number;
+  endLng: number;
+  latency: number;
+  color: string;
+  exchange: string;
+  timestamp: number;
+};

@@ -1,7 +1,7 @@
 'use client';
 import dynamic from 'next/dynamic';
 
-const Globe3D = dynamic(() => import('@/components/GlobeClient'), {
+const Globe3D = dynamic(() => import('@/components/GlobeClient/GlobeRenderer'), {
   ssr: false,
   loading: () => (
     <div className="flex items-center justify-center h-[90vh] text-gray-400">

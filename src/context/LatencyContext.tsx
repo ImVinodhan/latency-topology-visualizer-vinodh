@@ -9,20 +9,9 @@ import React, {
   useCallback,
 } from 'react';
 import { exchanges, providers } from '@/data/exchanges';
+import { LatencyArc } from '@/types/globe';
 
 export type ProviderKind = 'AWS' | 'GCP' | 'Azure';
-
-export type LatencyArc = {
-  id: string;
-  startLat: number;
-  startLng: number;
-  endLat: number;
-  endLng: number;
-  latency: number;
-  color: string;
-  exchange: string;
-  timestamp: number;
-};
 
 type LatencyContextValue = {
   arcs: LatencyArc[];
@@ -53,7 +42,7 @@ export function LatencyProvider({ children }: { children: React.ReactNode }) {
   const intervalRef = useRef<number>(DEFAULT_INTERVAL);
   const timerRef = useRef<number | null>(null);
   const isMounted = useRef(true);
-  const [mounted, setMounted] = useState(false); // ✅ NEW
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
